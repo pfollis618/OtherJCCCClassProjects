@@ -1,0 +1,146 @@
+:root{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    position: relative; /* Needed for Menu to work */
+    /* height: 1000vh; remove height after demo */
+    width: 100%;
+    background-color: #ffffee;
+    margin-left: 0;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: .5em 1em;
+    background-color: #dec;
+}
+
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: #ec5;
+}
+/* this is styling for menu */
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.nav-brand {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #08b;
+    flex-basis: 65%;
+    margin-left: 1em;
+}
+.hamburger {
+    display: block;
+    cursor: pointer;
+    flex-basis: 35%;
+    height: 70px;
+    padding-top: 1.5em;
+
+}
+.bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-color: #08b;
+    transition: all .3s ease;
+
+}
+.nav-menu {
+    list-style: none;
+    padding: .5rem;
+    position: fixed;
+    left: -100%;
+    top: 55px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ec5;
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+}
+.nav-menu.active {
+    left: 0;
+}
+.nav-items {
+    margin: 1em 0;
+}
+.nav-link {
+    text-decoration: none;
+    color: #08b;
+    font-weight: bold;
+    transition: .7s ease;
+}
+.nav-link:hover {
+    color: blueviolet;
+    transform: scaleY(1.5);
+    padding: .5em;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* main */
+.main {
+    margin-top: 80px;
+}
+/* footer */
+.footer {
+    text-align: center;
+    font-size: .8rem;
+    padding: 2rem;
+}
+.footer>a {
+    text-decoration: none;
+    color: #08b;
+}
+/* tablet-medium viewport */
+@media (min-width:45em) {
+    .wrapper {
+        width: 85%;
+    }
+    .nav-brand: {
+        flex:3 33% ;
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3em;
+    }
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+}
+/* desktop or large viewport */
+@media (min-width:64em) {
+    .wrapper {
+        width: 80%;
+    }
+}
