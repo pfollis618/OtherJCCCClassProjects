@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--Patrick Follis 5/1/2024 the form for the website-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Celtic Mythology </title>
+    <style>
+        #wrapper
+            {
+            background-color: #FFF;
+            }
+            
+        Body
+            {
+            background-color: #009900;
+            }
+        h1
+            {
+            text-align: center; 
+            font-size: 5vh;
+            }
+        header
+            {
+            text-align: center; 
+            background-color: #009933;
+            padding-top: 3px;
+            padding-bottom: 1px;
+            color: #e6e6e6;
+            }
+        h2
+            {
+            text-align: center;
+            font-size: 3vh;
+            }
+        main
+            {
+            margin:2%;
+            padding:1em;
+            }
+        nav
+            {
+            text-align: center;
+            font-weight: bold;
+            }
+
+        nav ul
+            {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 0;
+            font-size: 1.2em;
+            }
+        nav li
+            {
+            border-bottom: 1px solid 
+            }
+        nav a
+            {
+            text-decoration:none;
+            padding-right: 10px;   
+            }
+        a:link
+            {
+            color:#248f24;    
+            }
+        a:visited
+            {
+            color:#33cc33;    
+            }
+        a:hover
+            {
+            color:#ffb005;    
+            }
+        a:active
+            {
+            color:#FFF;   
+            }
+        img
+            {
+            max-width: 85%;
+            }
+        footer
+            {
+            text-align:center;    
+            }
+        form
+            {   
+            display:flex;
+            flex-direction:column;
+            flex-wrap:nowrap;
+            }
+        input[type=submit], input[type=reset] 
+            {
+            background-color: #33cc33;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+        input[type=submit]:hover, input[type=reset]:hover 
+            {
+            background-color:  #ff901a;
+            }
+        input[type=text], select, input[type=date], input[type=checkbox], input[type=radio], textarea, input[type=email]
+            {
+            width: 75%;
+            padding: 12px;
+            border: 1px solid #33cc33;
+            border-radius: 4px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            }
+        .grid
+            {
+            display: grid;
+            grid-gap: 2em;
+            grid-template-columns: 1fr 1fr;
+            }
+        .container
+            {
+            border-radius: 5px;
+            background-color: #ffe6cc;
+            padding: 20px;   
+            }
+
+        @media (min-width: 800px)
+        {
+            body
+            {
+            background-image: linear-gradient(to right, #33cc33 0%, #ff9933 100%); 
+            background-color: #009900;
+            }
+            nav
+            {
+            background-color: #ffe6cc;
+            padding: 1em;   
+            }
+            nav ul 
+            {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            list-style-type: none;
+            }
+
+            nav li 
+            {
+            border-bottom: none;
+            } 
+        }
+        @media (min-width: 1250px)
+        {
+            #wrapper
+            {
+            max-width: 85%;
+            border: 2px solid black;
+            margin-right: auto;
+            margin-left: auto;   
+            box-shadow: 3px 3px 3px #333333;   
+            }   
+        }
+    </style>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+
+<div id="wrapper">
+  <header>
+      <h1>Celtic Mythology</h1>
+  </header>    
+
+<nav >
+    <ul>
+        <li><a href="final.html">Home</a></li>
+        <li><a href="final_cu_chullainn.html">Cú Chulainn</a></li>
+        <li><a href="final_fionn_mac_cumhaill.html">Fionn mac Cumhaill</a></li>
+        <li><a href="final_selkie.html">Selkies</a></li>
+        <li><a href="final_kelpies.html">Kelpies</a></li>
+        <li><a href="final_form.html">Feedback</a></li>
+    </ul>
+</nav>
+    <h2>Contact Form</h2>
+    <h4> *The stared fields are required for this. Please complete these fields to submit feedback.</h4>
+    
+    <div class="container">
+        <form method="post"  action="https://webdevbasics.net/scripts/demo.php">
+            <label for="fname">*First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+            
+            <label for="favorite">*Favorite Celtic Myth Shown</label>
+            <select id="favorite" name="favoritemyth" required>
+                <option value="Cú Chulainn">Cú Chulainn</option>
+                <option value="Fionn mac Cumhaill">Fionn mac Cumhaill</option>
+                <option value="Selkies" selected>Selkies</option>
+                <option value="Kelpies">Kelpies</option>
+            </select>
+            
+            <p>Which of these Myths had you heard of before reading this?</p>
+            <input type="checkbox" id="Cú" name="Cú" value="Cú Chulainn">
+                <label for="Cú">Cú Chulainn</label>
+            <input type="checkbox" id="Fionn" name="Fionn" value="Fionn mac Cumhaill">
+                <label for="Fionn">Fionn mac Cumhaill</label>
+            <input type="checkbox" id="Selkies" name="Selkies" value="Selkies">
+                <label for="Selkies">Selkies</label>
+            <input type="checkbox" id="Kelpies" name="Kelpies" value="Kelpies">
+                <label for="Kelpies">Kelpies</label>
+            <br>
+            
+            <p>Which of these Myths would you want to be added next?</p>
+            <input type="radio" id="banshee" name="new" value="banshee">
+                <label for="banshee">Banshees - from Irish Legends</label>
+            <input type="radio" id="Cŵn Annwn" name="new" value="Cŵn Annwn">
+                <label for="Cŵn Annwn">Cŵn Annwn - from Welsh Myths</label>
+            <input type="radio" id="Nuckelavee" name="new" value="Nuckelavee">
+                <label for="Nuckelavee">Nuckelavee - from Scottish Myths</label>
+            <input type="radio" id="jetins" name="new" value="jetins">
+                <label for="jetins">Jetins - from Breton Myths</label>
+                
+            <br>
+            <label for="suggest">Suggestions for new Celtic Myth pages</label>
+            <input type="text" id="suggest" name="suggestions" placeholder="Suggestions here...">
+            
+            <label for="improve">Suggest improvements we could make to the website here</label>
+            <textarea id="improve" name="improve" rows="8" cols="50">Place suggestions here...</textarea>
+            
+             <label for="date">*Put the date of Submission</label>
+            <input type="date" id="date" name="submissiondate" required>
+            
+            <label for="email">Put Your Email Here</label>
+            <input type="email" id="email" name="email">
+            <br>
+                    
+            <input type="submit" value="Sumbit">
+            <input type="reset" value="Clear Form">
+        </form>
+    </div>
+</div>
+<footer>
+  <h4>For more information send an email <a href="mailto:pfollis@jccc.edu">here</a></h4>
+    <h4> If you want to download a copy of this page click <a href="final_form.html" download>here</a></h4>
+</footer>
+</body>
+</html>

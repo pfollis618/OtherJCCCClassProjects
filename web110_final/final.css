@@ -1,0 +1,186 @@
+/* Patrick Follis 3/7/2024 the style sheet*/
+
+#wrapper
+    {
+    background-color: #FFF;
+    }
+
+Body
+    {
+      background-color: #009900;
+    }
+h1
+    {
+    text-align: center; 
+    font-size: 5vh;
+    }
+header
+    {
+    text-align: center; 
+    background-color: #009933;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    color: #e6e6e6;
+    }
+h2
+    {
+    text-align: center;
+    font-size: 3vh;
+    }
+main
+    {
+    margin:2%;
+    padding:1em;
+    }
+nav
+    {
+    text-align: center;
+    font-weight: bold;
+    }
+
+nav ul
+    {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+    }
+nav li
+    {
+  
+    border-bottom: 1px solid 
+    }
+nav a
+    {
+    text-decoration:none;
+    padding-right: 10px;   
+    }
+a:link
+    {
+    color:#248f24;    
+    }
+a:visited
+    {
+    color:#33cc33;    
+    }
+a:hover
+    {
+    color:#ffb005;    
+    }
+a:active
+    {
+    color:#FFF;   
+    }
+img
+    {
+    max-width: 85%;
+    }
+footer
+    {
+    text-align:center;    
+    }
+table
+    {
+    border: 3px solid #000; 
+    border-collapse: collapse;
+    margin:auto;
+    }
+td, th 
+    { 
+    padding: 0.5em; 
+    border: 3px solid #000;
+    }
+td
+    {
+    text-align:center;    
+    }
+tr:nth-child(odd) 
+    { 
+    background-color:#33cc33; 
+    color:#fff;
+    }
+tr:nth-child(even) 
+    {
+    background-color:#ff9933;
+    }
+
+form
+    {   
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    }
+input[type=submit], input[type=reset] 
+    {
+    background-color: #33cc33;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+input[type=submit]:hover, input[type=reset]:hover 
+    {
+    background-color:  #ff901a;
+    }
+input[type=text], select, input[type=date], input[type=checkbox], input[type=radio], textarea, input[type=email]
+    {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #33cc33;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;   
+    }
+.grid
+    {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    }
+.container
+    {
+    border-radius: 5px;
+    background-color: #ffe6cc;
+    padding: 20px;   
+    }
+
+@media (min-width: 800px)
+    {
+    body
+        {
+        background-image: linear-gradient(to right, #33cc33 0%, #ff9933 100%); 
+        background-color: #009900;
+        }
+    nav
+        {
+        background-color: #ffe6cc;
+        padding: 1em;   
+        }
+    nav ul 
+        {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        list-style-type: none;
+        }
+
+    nav li 
+        {
+        border-bottom: none;
+        } 
+    }
+@media (min-width: 1250px)
+    {
+    #wrapper
+        {
+         max-width: 85%;
+        border: 2px solid black;
+        margin-right: auto;
+        margin-left: auto;   
+        box-shadow: 3px 3px 3px #333333;   
+        }   
+    }
+
+
+
+
