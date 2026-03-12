@@ -44,4 +44,5 @@ function debounce(func, wait = 25, immediate = true) {
     });
   }
 
+
   window.addEventListener('scroll', debounce(checkSlide));
