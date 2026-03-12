@@ -1,12 +1,3 @@
-//hamburger menu
-//const hamburgerMenu = document.querySelector('.hamburger')
-
-//const menu = document.querySelector('.menu')
-
-//hamburgerMenu.addEventListener('click', () => {
-//  hamburgerMenu.classList.toggle('active');
- // menu.classList.toggle('active');
-//})
 
 //Flipping Pictures JavaScript
 // Adapted from https://javascript30.com/
@@ -46,3 +37,4 @@ function debounce(func, wait = 25, immediate = true) {
 
 
   window.addEventListener('scroll', debounce(checkSlide));
+
