@@ -1,0 +1,47 @@
+//hamburger menu
+//const hamburgerMenu = document.querySelector('.hamburger')
+
+//const menu = document.querySelector('.menu')
+
+//hamburgerMenu.addEventListener('click', () => {
+//  hamburgerMenu.classList.toggle('active');
+ // menu.classList.toggle('active');
+//})
+
+//Flipping Pictures JavaScript
+// Adapted from https://javascript30.com/
+function debounce(func, wait = 25, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  const sliderImages = document.querySelectorAll('.flip');
+
+  function checkSlide() {
+    sliderImages.forEach(sliderImage => {
+      // half way through the image
+      const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+      // bottom of the image
+      const imageBottom = sliderImage.offsetTop + sliderImage.height;
+      const isHalfShown = slideInAt > sliderImage.offsetTop;
+      const isNotScrolledPast = window.scrollY < imageBottom;
+      if (isHalfShown && isNotScrolledPast) {
+        sliderImage.classList.add('active');
+        console.log("active")
+      } else {
+        sliderImage.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', debounce(checkSlide));
